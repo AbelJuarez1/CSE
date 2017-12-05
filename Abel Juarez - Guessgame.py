@@ -10,7 +10,11 @@ print("Try to guess the number I'm thinking of.")
 print("You have 5 guess or it's game over.")
 print("Get it right and it's...still...game over...")
 
-a = 'random.randint'
-print(random.randint(0 + 1,50))
+random_number = 'random.randint'
+print(random.randint(1, 50))
 number = input()
 
+
+def equal_number():
+    if random_number == number:
+        return "good job"
