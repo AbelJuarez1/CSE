@@ -1,4 +1,5 @@
-import random  # Abel Juarez
+import random
+# Abel Juarez
 
 # step one) generate random number
 # step two) take an input (number) from the user
@@ -8,13 +9,16 @@ import random  # Abel Juarez
 
 print("Try to guess the number I'm thinking of.")
 print("You have 5 guess or it's game over.")
-print("Get it right and it's...still...game over...")
+print("Get it right and it's...still...game over... '__'")
 
-random_number = 'random.randint'
-print(random.randint(1, 50))
-number = input()
+(random.randint(1, 50))
+num = (random.randint(1, 50))
+guess = input()
 
 
-def equal_number():
-    if random_number == number:
-        return "good job"
+if str(num) == str(guess):
+    print("good job")
+elif str(num) >= str(guess):
+    print("Guess higher")
+elif str(num) <= str(guess):
+    print("Guess lower")
