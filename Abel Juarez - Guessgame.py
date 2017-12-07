@@ -16,9 +16,12 @@ num = (random.randint(1, 50))
 guess = input()
 
 
-if str(num) == str(guess):
-    print("good job")
-elif str(num) >= str(guess):
-    print("Guess higher")
-elif str(num) <= str(guess):
-    print("Guess lower")
+for guess in range(5):
+    if str(num) == str(guess):
+        print("Good job")
+        quit()
+    elif str(num) >= str(guess):
+        print("Guess higher")
+    elif str(num) <= str(guess):
+        print("Guess lower")
+    input()
