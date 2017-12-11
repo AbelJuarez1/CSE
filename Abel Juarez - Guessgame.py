@@ -14,7 +14,7 @@ print("Get it right and it's...still...game over... '__'")
 (random.randint(1, 50))
 num = (random.randint(1, 50))
 guess = input()
-
+print(num)
 
 for guess in range(5):
     if str(num) == str(guess):
