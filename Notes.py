@@ -1,4 +1,5 @@
 import random
+"""
 # # # this is working
 # # car_name = "Wiebe mobile"
 # # car_type = "Tesla"
@@ -39,7 +40,7 @@ import random
 #
 # def print_age(name,age):
 #     print("%s is %d years old" % (name,age))
-#     age += 1  # this means the sae thign (age = age + 1)
+#     age += 1  # this means the same thign (age = age + 1)
 #     print("Next year, they will be %d" % age)
 #
 #
@@ -111,3 +112,35 @@ print(int(c) == 1)  # Both are ints
 print(c == str(1))  # Both are strings
 
 # The input command ALWAYS gives a string
+"""
+# Lists
+the_count = [1, 2, 3, 4, 5]
+shopping_list = ["noodles", "eggrolls", "milk", "rice", "soda", "chips"]
+
+print(shopping_list[0])
+print(shopping_list[2])
+
+print(len(shopping_list))
+
+# Going through a list
+for item in shopping_list:
+    print(item)
+
+for num in the_count:
+    print(num * 2)
+
+len(shopping_list)   # Gives me the length of the list
+range(3)   # Gives a list of the numbers 0 through 2
+range(len(shopping_list))   # A list of EVERY index in a list
+
+for num in range(len(shopping_list)):
+    item = shopping_list[num]
+    print("The item at the index %d is %s" % (num, item))
+
+# Turn things into a list
+str1 = "Hello Class!"
+listOne = list(str1)
+print(listOne)
+listOne[11] = '.'
+print(listOne)
+print(listOne.join(""))
