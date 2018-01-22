@@ -1,3 +1,4 @@
+import random
 import string
 # Abel Juarez
 """
@@ -9,5 +10,10 @@ A general guide for Hangman
 5. Create the win condition
 """
 
-print(string.ascii_lowercase)
-word_bank = [""]
+# print(string.ascii_lowercase)
+word_bank = ["Spongebob Squarepants", "Patrick Star", "Sheldon Plankton", "Eugiene Krabs", "Gary the Snail",
+             "Computer wife Karen", "Doodlebob", "Squidward Tentacles", "Sandy Cheeks", "Mermaid Man and Barnacle Boy"]
+# random.shuffle()
+# print(word_bank)
+for item in word_bank:
+    print(item)
