@@ -12,9 +12,13 @@ A general guide for Hangman
 guesses = 10
 word_bank = ["Spongebob Squarepants", "Patrick Star", "Sheldon Plankton", "Eugiene Krabs", "Gary the Snail",
              "Computer wife Karen", "Doodlebob", "Squidward Tentacles", "Sandy Cheeks", "Mermaid Man and Barnacle Boy"]
-print(random.choice(word_bank))
+letters_guessed = []
+for guess in range(10):
+    
+# while guesses > 0:
 
-while guesses > 0:
+str1 = (random.choice(word_bank))
+listOne = list(str1)
+print(listOne)
 
-
-if 
+# if
