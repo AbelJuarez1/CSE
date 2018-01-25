@@ -14,11 +14,11 @@ word_bank = ["Spongebob Squarepants", "Patrick Star", "Sheldon Plankton", "Eugie
              "Computer wife Karen", "Doodlebob", "Squidward Tentacles", "Sandy Cheeks", "Mermaid Man and Barnacle Boy"]
 letters_guessed = []
 for guess in range(10):
-    
-# while guesses > 0:
 
-str1 = (random.choice(word_bank))
-listOne = list(str1)
-print(listOne)
+while guesses > 0:
+    letters_guessed.append
+# str1 = (random.choice(word_bank))
+# listOne = list(str1)
+# print(listOne)
 
 # if
