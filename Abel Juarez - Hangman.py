@@ -10,15 +10,23 @@ A general guide for Hangman
 5. Create the win condition
 """
 guesses = 10
-word_bank = ["Spongebob Squarepants", "Patrick Star", "Sheldon Plankton", "Eugiene Krabs", "Gary the Snail",
-             "Computer wife Karen", "Doodlebob", "Squidward Tentacles", "Sandy Cheeks", "Mermaid Man and Barnacle Boy"]
+guess = " "
+word_bank = ["Spongebob_Squarepants", "Patrick_Star", "Sheldon_Plankton", "Eugiene_Krabs", "Gary_the_Snail",
+             "Computer_wife_Karen", "Doodlebob", "Squidward_Tentacles", "Sandy_Cheeks", "Mermaid_Man_and_Barnacle_Boy"]
 letters_guessed = []
-for guess in range(10):
+word = random.choice(word_bank)
+correct_letter = list(word)
 
-while guesses > 0:
-    letters_guessed.append
-# str1 = (random.choice(word_bank))
-# listOne = list(str1)
-# print(listOne)
+while guesses > 0 != quit:
+    output = []
+    for letter in word:
+        if letter in letters_guessed:
+            output.append(letter)
+        else:
+            output.append("*")
+    print(output)
 
-# if
+    guess = input("Guess a letter: ")
+    print("guesses left: %s" % guesses)
+    letters_guessed.append(guess)
+    print(" ".join(letters_guessed))
