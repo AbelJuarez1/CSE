@@ -11,11 +11,12 @@ A general guide for Hangman
 """
 guesses = 10
 guess = " "
-word_bank = ["Spongebob_Squarepants", "Patrick_Star", "Sheldon_Plankton", "Eugiene_Krabs", "Gary_the_Snail",
-             "Computer_wife_Karen", "Doodlebob", "Squidward_Tentacles", "Sandy_Cheeks", "Mermaid_Man_and_Barnacle_Boy"]
+word_bank = ["SpongebobSquarepants", "PatrickStar", "SheldonPlankton", "EugeneKrabs", "GarytheSnail",
+             "ComputerwifeKaren", "Doodlebob", "SquidwardTentacles", "SandyCheeks", "BarnacleBoy"]
 letters_guessed = []
 word = random.choice(word_bank)
 correct_letter = list(word)
+
 
 while guesses > 0 != quit:
     output = []
@@ -30,3 +31,5 @@ while guesses > 0 != quit:
     print("guesses left: %s" % guesses)
     letters_guessed.append(guess)
     print(" ".join(letters_guessed))
+    if guess in word:
+        guesses -= 1
