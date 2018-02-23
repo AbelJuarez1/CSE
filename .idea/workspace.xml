@@ -31,11 +31,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Abel Juarez - Resident Evil World Map.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Abel Juarez - Resident Evil World Map.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Abel Juarez - Resident Evil World Map.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="208" column="10" lean-forward="false" selection-start-line="208" selection-start-column="10" selection-end-line="208" selection-end-column="10" />
+            <state relative-caret-position="68">
+              <caret line="4" column="80" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="4" selection-end-column="80" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Class Notes.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Class Notes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Abel Juarez - World Map OOP.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Abel Juarez - World Map OOP.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -103,13 +123,16 @@
         <option value="$PROJECT_DIR$/Notes.py" />
         <option value="$PROJECT_DIR$/Abel Juarez - Dictionary World Map.py" />
         <option value="$PROJECT_DIR$/Abel Juarez - Resident Evil World Map.py" />
+        <option value="$PROJECT_DIR$/Function Notes.py" />
+        <option value="$PROJECT_DIR$/Class Notes.py" />
+        <option value="$PROJECT_DIR$/Abel Juarez - World Map OOP.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="14" />
-    <option name="y" value="51" />
-    <option name="width" value="1352" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="y" value="46" />
+    <option name="width" value="780" />
     <option name="height" value="689" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -128,6 +151,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -140,11 +164,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -158,24 +181,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Abel Juarez - Resident Evil World Map">
-    <configuration name="Abel Juarez - Guessgame" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="CSE" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Abel Juarez - Guessgame.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.Class Notes">
     <configuration name="Abel Juarez - Hangman" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -193,23 +199,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="Abel Juarez - Lucky 7's" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="CSE" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Abel Juarez - Lucky 7's.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <configuration name="Abel Juarez - Resident Evil World Map" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -223,6 +212,40 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CSE" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Abel Juarez - Resident Evil World Map.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="Class Notes" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CSE" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Class Notes.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="Function Notes" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CSE" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Function Notes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -246,18 +269,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.Notes" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Abel Juarez - Guessgame" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Abel Juarez - Lucky 7's" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Abel Juarez - Hangman" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Abel Juarez - Resident Evil World Map" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Abel Juarez - Hangman" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Abel Juarez - Resident Evil World Map" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Function Notes" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Class Notes" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Abel Juarez - Resident Evil World Map" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Notes" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Abel Juarez - Hangman" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Abel Juarez - Lucky 7's" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Abel Juarez - Guessgame" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Class Notes" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Function Notes" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Abel Juarez - Resident Evil World Map" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Notes" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Abel Juarez - Hangman" />
       </list>
     </recent_temporary>
   </component>
@@ -275,14 +298,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="14" y="51" width="1352" height="689" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32430342" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34341908" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32553956" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32242227" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -305,30 +329,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Abel Juarez - Lucky 7's.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Notes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1904">
-          <caret line="112" column="41" lean-forward="false" selection-start-line="112" selection-start-column="41" selection-end-line="112" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Warmups.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="44" lean-forward="false" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Abel Juarez - Guessgame.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -700,10 +700,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Function Notes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class Notes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Abel Juarez - Resident Evil World Map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="208" column="10" lean-forward="false" selection-start-line="208" selection-start-column="10" selection-end-line="208" selection-end-column="10" />
+        <state relative-caret-position="68">
+          <caret line="4" column="80" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="4" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Abel Juarez - World Map OOP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding />
         </state>
       </provider>

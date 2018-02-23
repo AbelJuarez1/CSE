@@ -23,14 +23,14 @@ mansion_map = {
         'DESCRIPTION': "You find one of your friends dead on the floor. A zombie walks toward you."
                        " There is a door to the south, north, and northeast.",
         'PATHS': {
-            'SOUTH': 'DINING ROOM',
+            'SOUTH': 'DININGROOM',
             'NORTH': 'VULTUREHEAD',
             'NORTHEAST': 'PIANOROOM'
         }
     },
     'PIANOROOM': {
         'NAME': "Piano Room",
-        'DESCRIPTION': "There is a piano with some a music score on it. An ammo clip lays on top of a bar stool."
+        'DESCRIPTION': "There is a piano with a music score on it. An ammo clip lays on top of a bar stool."
                        " The only exit is to the south.",
         'PATHS': {
             'SOUTH': 'TEAROOM'
@@ -131,7 +131,8 @@ mansion_map = {
     },
     'BATH': {
         'NAME': "Bathroom",
-        'DESCRIPTION': "",
+        'DESCRIPTION': "There is abathtub filled with dirty water. It seems that thee is something shining inside of of"
+                       "it. ONe exit leads south.",
         'PATHS': {
             'SOUTH': 'NEROOM'
         }
@@ -155,7 +156,8 @@ mansion_map = {
     },
     'SAFEROOM2': {
         'NAME': "Safe Room",
-        'DESCRIPTION': "",
+        'DESCRIPTION': "There is a box for your items and a typewriter to save your progress. The only"
+                       "exit leads south.",
         'PATHS': {
             'SOUTH': 'CROW'
         }
