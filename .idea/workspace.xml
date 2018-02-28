@@ -14,7 +14,7 @@
       <file leaf-file-name="Notes.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Notes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4097">
+            <state relative-caret-position="390">
               <caret line="241" column="41" lean-forward="false" selection-start-line="241" selection-start-column="41" selection-end-line="241" selection-end-column="41" />
               <folding />
             </state>
@@ -34,18 +34,8 @@
       <file leaf-file-name="Abel Juarez - Resident Evil World Map.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Abel Juarez - Resident Evil World Map.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="80" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="4" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Class Notes.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Class Notes.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+            <state relative-caret-position="-192">
+              <caret line="159" column="42" lean-forward="true" selection-start-line="158" selection-start-column="23" selection-end-line="159" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -54,8 +44,18 @@
       <file leaf-file-name="Abel Juarez - World Map OOP.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Abel Juarez - World Map OOP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            <state relative-caret-position="-797">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Class Notes.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Class Notes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1258">
+              <caret line="74" column="38" lean-forward="false" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -122,9 +122,9 @@
         <option value="$PROJECT_DIR$/Abel Juarez - Hangman.py" />
         <option value="$PROJECT_DIR$/Notes.py" />
         <option value="$PROJECT_DIR$/Abel Juarez - Dictionary World Map.py" />
-        <option value="$PROJECT_DIR$/Abel Juarez - Resident Evil World Map.py" />
         <option value="$PROJECT_DIR$/Function Notes.py" />
         <option value="$PROJECT_DIR$/Class Notes.py" />
+        <option value="$PROJECT_DIR$/Abel Juarez - Resident Evil World Map.py" />
         <option value="$PROJECT_DIR$/Abel Juarez - World Map OOP.py" />
       </list>
     </option>
@@ -152,7 +152,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,6 +163,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -181,24 +181,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Class Notes">
-    <configuration name="Abel Juarez - Hangman" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="CSE" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Abel Juarez - Hangman.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.Abel Juarez - World Map OOP">
     <configuration name="Abel Juarez - Resident Evil World Map" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -212,6 +195,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CSE" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Abel Juarez - Resident Evil World Map.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="Abel Juarez - World Map OOP" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CSE" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Abel Juarez - World Map OOP.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -269,18 +269,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.Notes" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Abel Juarez - Hangman" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Abel Juarez - Resident Evil World Map" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Function Notes" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Class Notes" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Abel Juarez - Resident Evil World Map" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Function Notes" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Class Notes" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Abel Juarez - World Map OOP" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Class Notes" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Function Notes" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Abel Juarez - Resident Evil World Map" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Notes" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Abel Juarez - Hangman" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Abel Juarez - World Map OOP" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Class Notes" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Function Notes" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Abel Juarez - Resident Evil World Map" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Notes" />
       </list>
     </recent_temporary>
   </component>
@@ -301,7 +301,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34341908" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35930407" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -694,40 +694,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Notes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4097">
+        <state relative-caret-position="390">
           <caret line="241" column="41" lean-forward="false" selection-start-line="241" selection-start-column="41" selection-end-line="241" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Function Notes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Function Notes.py" />
     <entry file="file://$PROJECT_DIR$/Class Notes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        <state relative-caret-position="1258">
+          <caret line="74" column="38" lean-forward="false" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Abel Juarez - Resident Evil World Map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="80" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="4" selection-end-column="80" />
+        <state relative-caret-position="-192">
+          <caret line="159" column="42" lean-forward="true" selection-start-line="158" selection-start-column="23" selection-end-line="159" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Abel Juarez - World Map OOP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        <state relative-caret-position="-797">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>

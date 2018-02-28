@@ -75,7 +75,7 @@ mansion_map = {
         'NAME': "North-West Corridor",
         'DESCRIPTION': "",
         'PATHS': {
-            'SOUTH': 'SAFEROOM'
+            'SOUTH': 'SAFEROOM1'
         }
     },
     'SAFEROOM1': {
@@ -132,7 +132,7 @@ mansion_map = {
     'BATH': {
         'NAME': "Bathroom",
         'DESCRIPTION': "There is abathtub filled with dirty water. It seems that thee is something shining inside of of"
-                       "it. ONe exit leads south.",
+                       "it. One exit leads south.",
         'PATHS': {
             'SOUTH': 'NEROOM'
         }
