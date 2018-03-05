@@ -57,17 +57,21 @@ safe1 = Room("Safe Room", "nw", None, None, None, None, None, None, None, None,
              "There is a box in here to place your items and a typewriter to save your progress. The only"
              "exit leads north.")
 
-mirror = Room("Mirror Room", None, None, None, "main_hall", None, None, "costume", None, None, "Insert Description")
+mirror = Room("Mirror Room", None, None, None, "main_hall", None, None, "costume", None, None,
+              "Insert Description")
 
-sgal = Room("Small Gallery", None, "dog", None, "main_hall", None, None, None, None, None, "Insert Description")
+sgal = Room("Small Gallery", None, "dog", None, "main_hall", None, None, None, None, None,
+            "Insert Description")
 
-costume = Room("Costume Room", "mirror", None, None, None, None, None, None, None, None, "Insert Description")
+costume = Room("Costume Room", "mirror", None, None, None, None, None, None, None, None,
+               "Insert Description")
 
 dog = Room("Hallway", "ne", None, None, "sgal", None, None, None, None, "ammo",
            "Your in a long hallway with a couple of ammo clips laying around. A couple of dogs are blocking"
            "the way north. You can go back west if you need.")
 
-ne = Room("North-East Room", "bath", "boiler", "dog", "crow", None, None, None, None, "ceiling", "Insert Description")
+ne = Room("North-East Room", "bath", "boiler", "dog", "crow", None, None, None, "ceiling", None,
+          "Insert Description")
 
 bath = Room("Bathroom", None, None, "ne", None, None, None, None, None, None,
             "There is a bathtub filled with dirty water. It seems that thee is something shining inside of of"
@@ -75,18 +79,51 @@ bath = Room("Bathroom", None, None, "ne", None, None, None, None, None, None,
 
 boiler = Room("Boiler Room", None, None, None, "ne", None, None, None, None, None, "Insert Description")
 
-crow = Room("Gallery", "safe2", "ne", None, "outside", None, "Study", None, None, None, "Insert Description")
+crow = Room("Gallery", "safe2", "ne", None, "outside", None, "Study", None, None, None,
+            "There isn't much here but a couple of annoying crows. There are paths to the north, east, "
+            "west, and northwest.")
 
 safe2 = Room("Safe Room", None, None, "crow", None, None, None, None, None, None,
              "There is a box for your items and a typewriter to save your progress. The only"
              "exit leads south.")
 
-study = Room("Study", None, None, "crow", None, None, None, None, None, None, "Insert Description")
+study = Room("Study", None, None, "crow", None, None, None, None, None, None,
+             "Insert Description")
 
-outside = Room("Outside Corridor", "shed", "crow", None, None, None, None, None, None, None, "Insert Description")
+outside = Room("Outside Corridor", "shed", "crow", None, None, None, None, None, None, None,
+               "Insert Description")
 
-shed = Room("Shed", None, None, "outside", None, None, None, None, None, None, "Insert Description")
+shed = Room("Shed", None, None, "outside", None, None, None, None, None, None,
+            "Insert Description")
 
-ceiling = Room("Ceiling Room", None, None, "shotgun", None, None, None, None, None, None, "Insert Description")
+ceiling = Room("Ceiling Room", None, None, "shotgun", None, None, None, None, None, None,
+               "Insert Description")
 
-shotgun = Room("Shotgun Room", "ceiling", None, None, None, None, None, None, None, None, "Insert Description")
+shotgun = Room("Shotgun Room", "ceiling", None, None, None, None, None, None, None, "shotgun",
+               "There is a shotgun on the wall. The only exit is to the north.")
+
+current_node = main_hall
+directions = ['north', 'east', 'south', 'west']
+short_directions = ['n', 'e', 's', 'w']
+
+while True:
+    print(current_node.name)
+    print(current_node.description)
+    command = input('>_').lower()
+    print()
+    if command == 'quit':
+        quit(0)
+    elif command in short_directions:
+        # look for which command we typed in
+        pos = short_directions.index(command)
+        # change the command to be the long form
+        command = directions[pos]
+    if command in directions:
+        try:
+            current_node.move(command)
+        except KeyError:
+            print("You can't go that way.")
+            print()
+    else:
+        print('Command not recognized')
+        print()
