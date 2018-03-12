@@ -6,10 +6,10 @@ class Room(object):
         self.east = east
         self.south = south
         self.west = west
-        self.ne = northeast
-        self.nw = northwest
-        self.se = southeast
-        self.sw = southwest
+        self.northeast = northeast
+        self.northwest = northwest
+        self.southeast = southeast
+        self.southwest = southwest
         self.items = items
         self.description = description
 
@@ -19,7 +19,7 @@ class Room(object):
 
 
 # Initialize Rooms
-main_hall = Room("Main Hall", None, "sgal", None, "dining", "mirror1", None, None, None, None,
+main_hall = Room("Main Hall", None, "sgal", None, "dining", "mirror", None, None, None, None,
                  "The Main Hall seems to be very"
                  " empty. There is a typewriter in the corner to save your "
                  "progress. One door is to the west, east, and northeast.")
@@ -96,15 +96,15 @@ outside = Room("Outside Corridor", "shed", "crow", None, None, None, None, None,
 shed = Room("Shed", None, None, "outside", None, None, None, None, None, None,
             "Insert Description")
 
-ceiling = Room("Ceiling Room", None, None, "shotgun", None, None, None, None, None, None,
+ceiling = Room("Ceiling Room", None, "ne", "shotgun", None, None, None, None, None, None,
                "Insert Description")
 
 shotgun = Room("Shotgun Room", "ceiling", None, None, None, None, None, None, None, "shotgun",
                "There is a shotgun on the wall. The only exit is to the north.")
 
 current_node = main_hall
-directions = ['north', 'east', 'south', 'west']
-short_directions = ['n', 'e', 's', 'w']
+directions = ['north', 'east', 'south', 'west', 'northwest', 'northeast', 'southwest', 'southeast']
+short_directions = ['n', 'e', 's', 'w', 'nw', 'ne', 'sw', 'se']
 
 while True:
     print(current_node.name)
