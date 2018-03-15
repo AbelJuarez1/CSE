@@ -33,6 +33,15 @@ class KeylessCar(Car):
     def turn_on(self):
         print("You push the button, and the car turns on")
 
+
 test_car.turn_on()
 cool_car = KeylessCar(4, 9001)
 cool_car.turn_on()
+
+
+class Tesla(Car):
+    def __init__(self, seats):
+        super(Tesla, self).__init__(seats, 500)
+
+    def fly(self):
+        print("You launch the car into low earth orbit")
