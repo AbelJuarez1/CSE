@@ -4,7 +4,6 @@ import random
 #       1. items
 #       2. characters
 #       3. rooms
-# - instantiate classes
 # - controller
 
 
@@ -88,7 +87,7 @@ class HgAmmo(Ammo):
 
 class SgShells(Ammo):
     def __init__(self):
-        super(SgShells, self).__init__("shotgun shells", 6)
+        super(SgShells, self).__init__("shotgun shells", 4)
 
     def add_shells(self):
         print("You received more shells")
@@ -154,11 +153,13 @@ class Character(object):
 
 knife = Knife()
 shot = Shotgun()
-gh = GrnHerb()
-rh = RedHerb()
+gherb = GrnHerb()
+rherb = RedHerb()
 pistol = Handgun()
 grenade = Grenade()
 dagger = Dagger()
+shotgunammo = Ammo(4, "shotgun shells")
+pistolammo = Ammo(5, "handgun ammo")
 
 player = Character("You", None, 100, None, knife)
 enemy = Character("enemy", None, 50, None, shot)
@@ -270,6 +271,7 @@ shotgun = Room("Shotgun Room", "ceiling", None, None, None, None, None, None, No
 
 current_node = main_hall
 directions = ['north', 'east', 'south', 'west', 'northwest', 'northeast', 'southwest', 'southeast']
+items = ['pick up', 'pick up', 'take']
 short_directions = ['n', 'e', 's', 'w', 'nw', 'ne', 'sw', 'se']
 
 while True:
@@ -293,3 +295,5 @@ while True:
     else:
         print('Command not recognized')
         print()
+    if command in items:
+        
