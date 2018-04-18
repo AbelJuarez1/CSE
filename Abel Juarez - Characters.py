@@ -18,4 +18,3 @@ class Character(object):
 
 player = Character("You", None, 100, None, 25)
 enemy = Character("enemy", None, 50, None, 20)
-

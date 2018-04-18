@@ -1,4 +1,4 @@
-import random
+# import random
 # - import statements
 # - class definition
 #       1. items
@@ -43,6 +43,7 @@ class Knife(Weapon):
     def stab(self):
         print("You stabbed the enemy")
 
+
 class ZombieClaws(Weapon):
     def __init__(self):
         super(ZombieClaws, self).__init__("Zombie Claws", 50)
@@ -64,12 +65,12 @@ class Gun(Weapon):
 
 class Handgun(Gun):
     def __init__(self):
-        super(Handgun, self).__init__("Pistol", 30)
+        super(Handgun, self).__init__("Pistol", 10)
 
 
 class Shotgun(Gun):
     def __init__(self):
-        super(Shotgun, self).__init__("Shotgun", 50)
+        super(Shotgun, self).__init__("Shotgun", 20)
 
 
 class Ammo(Consumable):
@@ -138,9 +139,9 @@ class RedHerb(Herb):
 
 
 class Character(object):
-    def __init__(self, name, inventory, health, stats, weapon):
+    def __init__(self, name, inventor, health, stats, weapon):
         self.name = name
-        self.inventory = inventory
+        self.inventory = inventor
         self.health = health
         self.stats = stats
         self.weapon = weapon
@@ -178,7 +179,7 @@ crow = Character("Crow", None, None, None, None)
 
 class Room(object):
     def __init__(self, name, north, east, south, west, northeast, northwest, southeast, southwest,
-                 items, character, description):
+                 item, character, description):
         self.name = name
         self.north = north
         self.east = east
@@ -188,7 +189,7 @@ class Room(object):
         self.northwest = northwest
         self.southeast = southeast
         self.southwest = southwest
-        self.items = items
+        self.item = item
         self.character = character
         self.description = description
 
@@ -280,7 +281,7 @@ outside = Room("Outside Corridor", "shed", "crow", None, None, None, None, None,
 shed = Room("Shed", None, None, "outside", None, None, None, None, None, [gherb, gherb, dagger, grenade], None,
             "Insert Description")
 
-ceiling = Room("Ceiling Room", None, "ne", "shotgun", None, None, None, None, None, None, None,
+ceiling = Room("Ceiling Room", None, "ne", "shotgun", None, None, None, None, None, [pistolammo], None,
                "Insert Description")
 
 shotgun = Room("Shotgun Room", "ceiling", None, None, None, None, None, None, None, [Shotgun], None,
@@ -288,8 +289,8 @@ shotgun = Room("Shotgun Room", "ceiling", None, None, None, None, None, None, No
 
 current_node = main_hall
 directions = ['north', 'east', 'south', 'west', 'northwest', 'northeast', 'southwest', 'southeast']
-action = ['take']
 short_directions = ['n', 'e', 's', 'w', 'nw', 'ne', 'sw', 'se']
+inventory = []
 
 while True:
     print(current_node.name)
@@ -312,4 +313,24 @@ while True:
     else:
         print('Command not recognized')
         print()
-    # if command in action:
+    if current_node.item is None:
+        print("There are no items in the room")
+    if current_node.item is not None:
+        print("There are the following items in the room:""")
+        for i, n in enumerate(current_node.item):
+                print("%d : %s" % (i+1, n.name))
+
+    if 'take' in command:
+        item_requested = command[5:]
+        found = False
+        for item in current_node.item:
+            if item.name == item_requested:
+                player.inventory.append(item)
+                print(inventory)
+                found = True
+                print("YOu took the %s" % item_requested)
+                print()
+                current_node.item.remove(item)
+        if not found:
+            print("This item isn't here buddy.")
+            print()
