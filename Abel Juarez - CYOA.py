@@ -292,45 +292,45 @@ directions = ['north', 'east', 'south', 'west', 'northwest', 'northeast', 'south
 short_directions = ['n', 'e', 's', 'w', 'nw', 'ne', 'sw', 'se']
 inventory = []
 
-while True:
-    print(current_node.name)
-    print(current_node.description)
-    command = input('>_').lower()
-    print()
-    if command == 'quit':
-        quit(0)
-    elif command in short_directions:
-        # look for which command we typed in
-        pos = short_directions.index(command)
-        # change the command to be the long form
-        command = directions[pos]
-    if command in directions:
-        try:
-            current_node.move(command)
-        except KeyError:
-            print("You can't go that way.")
-            print()
-    else:
-        print('Command not recognized')
-        print()
-    if current_node.item is None:
-        print("There are no items in the room")
-    if current_node.item is not None:
-        print("There are the following items in the room:""")
-        for i, n in enumerate(current_node.item):
-                print("%d : %s" % (i+1, n.name))
 
-    if 'take' in command:
+while True:
+    if command == 'take':
         item_requested = command[5:]
         found = False
         for item in current_node.item:
             if item.name == item_requested:
                 player.inventory.append(item)
-                print(inventory)
+                print("%s is now in your inventory." % player.inventory)
                 found = True
-                print("YOu took the %s" % item_requested)
+                print("You took the %s" % item_requested)
                 print()
                 current_node.item.remove(item)
         if not found:
             print("This item isn't here buddy.")
+            print()
+        if current_node.item is None:
+            print("There are no items in the room")
+        if current_node.item is not None:
+            print("There are the following items in the room:")
+            for i, n in enumerate(current_node.item):
+                print("%d : %s" % (i + 1, n.name))
+        print(current_node.name)
+        print(current_node.description)
+        command = input('>_').lower()
+        print()
+        if command == 'quit':
+            quit(0)
+        elif command in short_directions:
+            # look for which command we typed in
+            pos = short_directions.index(command)
+            # change the command to be the long form
+            command = directions[pos]
+        if command in directions:
+            try:
+                current_node.move(command)
+            except KeyError:
+                print("You can't go that way.")
+                print()
+        else:
+            print('Command not recognized')
             print()
