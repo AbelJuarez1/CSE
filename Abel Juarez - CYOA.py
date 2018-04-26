@@ -165,12 +165,12 @@ rherb = RedHerb()
 pistol = Handgun()
 grenade = Grenade()
 dagger = Dagger()
-shotgunammo = Ammo(4, "shotgun shells")
-pistolammo = Ammo(5, "handgun ammo")
+shotgunammo = Ammo("shotgun shells", 4)
+pistolammo = Ammo("handgun ammo", 5)
 zombie = ZombieClaws()
 
 player = Character("You", None, 100, None, knife)
-enemy = Character("enemy", None, 50, None, shot)
+enemy = Character("zombie", None, 50, None, shot)
 crimson = Character("crimson", None, 200, None, ZombieClaws)
 plant_enemy = Character("large plant", None, 300, None, None)
 cerberus = Character("Cerberus", None, 75, None, None)
@@ -179,7 +179,7 @@ crow = Character("Crow", None, None, None, None)
 
 class Room(object):
     def __init__(self, name, north, east, south, west, northeast, northwest, southeast, southwest,
-                 item, character, description):
+                 items, character, description):
         self.name = name
         self.north = north
         self.east = east
@@ -189,7 +189,7 @@ class Room(object):
         self.northwest = northwest
         self.southeast = southeast
         self.southwest = southwest
-        self.item = item
+        self.items = items
         self.character = character
         self.description = description
 
@@ -296,6 +296,20 @@ inventory = []
 while True:
     print(current_node.name)
     print(current_node.description)
+    if current_node.items is None:
+        print("There are no items in the room")
+    else:
+        print("There are the following items in the room:")
+        for i, n in enumerate(current_node.items):
+            print("%d : %s" % (i+1, n.name))
+            print()
+    if current_node.character is None:
+        print("There are no enemies in the room")
+    else:
+        print("There are these enemies in the room:")
+        for i, n in enumerate(current_node.character):
+            print("%d : %s" % (i+1, n.name))
+
     command = input('>_').lower()
     print()
     if 'quit' in command:
@@ -318,21 +332,16 @@ while True:
         if 'take' in command:
             item_requested = command[5:]
             found = False
-            for item in current_node.item:
+            for item in current_node.items:
                 if item.name == item_requested:
                     player.inventory.append(item)
                     print("%s is now in your inventory." % player.inventory)
                     found = True
                     print("You took the %s" % item_requested)
                     print()
-                    current_node.item.remove(item)
+                    current_node.items.remove(item)
             if not found:
                 print("This item isn't here buddy.")
                 print()
-            if current_node.item is None:
-                print("There are no items in the room")
-            if current_node.item is not None:
-                print("There are the following items in the room:")
-                for i, n in enumerate(current_node.item):
-                    print("%d : %s" % (i + 1, n.name))
-
+    if 'attack' in command:
+        attack = command[5:]
