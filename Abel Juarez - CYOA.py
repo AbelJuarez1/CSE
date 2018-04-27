@@ -65,12 +65,12 @@ class Gun(Weapon):
 
 class Handgun(Gun):
     def __init__(self):
-        super(Handgun, self).__init__("Pistol", 10)
+        super(Handgun, self).__init__("pistol", 10)
 
 
 class Shotgun(Gun):
     def __init__(self):
-        super(Shotgun, self).__init__("Shotgun", 20)
+        super(Shotgun, self).__init__("shotgun", 20)
 
 
 class Ammo(Consumable):
@@ -139,9 +139,9 @@ class RedHerb(Herb):
 
 
 class Character(object):
-    def __init__(self, name, inventor, health, stats, weapon):
+    def __init__(self, name, health, stats, weapon):
         self.name = name
-        self.inventory = inventor
+        self.inventory = []
         self.health = health
         self.stats = stats
         self.weapon = weapon
@@ -302,7 +302,6 @@ while True:
         print("There are the following items in the room:")
         for i, n in enumerate(current_node.items):
             print("%d : %s" % (i+1, n.name))
-            print()
     if current_node.character is None:
         print("There are no enemies in the room")
     else:
@@ -329,19 +328,19 @@ while True:
         print('Command not recognized')
         print()
 
-        if 'take' in command:
-            item_requested = command[5:]
-            found = False
-            for item in current_node.items:
-                if item.name == item_requested:
-                    player.inventory.append(item)
-                    print("%s is now in your inventory." % player.inventory)
-                    found = True
-                    print("You took the %s" % item_requested)
-                    print()
-                    current_node.items.remove(item)
-            if not found:
-                print("This item isn't here buddy.")
-                print()
+    if 'take' in command:
+        item_requested = command[5:]
+        found = False
+        for item in current_node.items:
+            if item.name == item_requested:
+                player.inventory.append(item)
+                for item in player.inventory:
+                    print("You take the %s" % item_requested)
+                    print("You have a %s in your inventory" % item.name)
+                found = True
+                current_node.items.remove(item)
+        if not found:
+            print("This item isn't here buddy.")
+            print()
     if 'attack' in command:
         attack = command[5:]
