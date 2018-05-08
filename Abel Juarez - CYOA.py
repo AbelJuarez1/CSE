@@ -32,8 +32,9 @@ class Weapon(Item):
         super(Weapon, self).__init__(name)
         self.attack = attack
 
-    def attack(self):
-        print("You attacked the enemy with %s" % self.name)
+    def attack(self, target):
+        print("You attacked the %s." % target.name)
+        target.take_damage(self.attack)
 
 
 class Knife(Weapon):
@@ -67,6 +68,9 @@ class Handgun(Gun):
     def __init__(self):
         super(Handgun, self).__init__("pistol", 10)
 
+    def attack(self, target):
+        print("You used %s to attack the %s" % (self.name, target.name))
+        self.attack(target)
 
 class Shotgun(Gun):
     def __init__(self):
@@ -152,8 +156,6 @@ class Character(object):
     def take_damage(self, dmg):
         self.health(dmg)
 
-    def inventory(self):
-        self.inventory(Item)
     # def interact(self, item):
     #     item.inventory
 
@@ -169,12 +171,12 @@ shotgunammo = Ammo("shotgun shells", 4)
 pistolammo = Ammo("handgun ammo", 5)
 zombie = ZombieClaws()
 
-player = Character("You", None, 100, None, knife)
-enemy = Character("zombie", None, 50, None, shot)
-crimson = Character("crimson", None, 200, None, ZombieClaws)
-plant_enemy = Character("large plant", None, 300, None, None)
-cerberus = Character("Cerberus", None, 75, None, None)
-crow = Character("Crow", None, None, None, None)
+player = Character("You", 100, None, knife)
+enemy = Character("zombie", 50, None, shot)
+crimson = Character("crimson", 200, None, ZombieClaws)
+plant_enemy = Character("large plant", 300, None, None)
+cerberus = Character("Cerberus", 75, None, None)
+crow = Character("Crow", None, None, None)
 
 
 class Room(object):
@@ -205,7 +207,7 @@ main_hall = Room("Main Hall", None, "sgal", None, "dining", "mirror", None, None
                  "progress. One door is to the west, east, and northeast.")
 
 dining = Room("Dining Room", "tea", "main_hall", None, None, None, None, None, None, [shotgunammo], None,
-              "A big table is in the middle of the room with a blue crystal in the middle."
+              "A big table is in the middle of the room."
               " One door leads east, and another leads north")
 
 tea = Room("Tea Room", "vulture", None, "dining", None, "piano", None, None, None, None, [enemy],
@@ -325,22 +327,41 @@ while True:
             print("You can't go that way.")
             print()
     else:
-        print('Command not recognized')
-        print()
-
+            print('Command not recognized')
+            print()
     if 'take' in command:
         item_requested = command[5:]
         found = False
         for item in current_node.items:
             if item.name == item_requested:
                 player.inventory.append(item)
-                for item in player.inventory:
+                for items in player.inventory:
                     print("You take the %s" % item_requested)
                     print("You have a %s in your inventory" % item.name)
+                    print()
                 found = True
                 current_node.items.remove(item)
         if not found:
             print("This item isn't here buddy.")
             print()
-    if 'attack' in command:
-        attack = command[5:]
+    elif 'inventory' in command:
+        for item in player.inventory:
+            print(item.name)
+            print()
+    if 'use' in command:
+        item_requested = command[7:]
+        found = False
+        for item in player.inventory:
+            if item.name == item_requested:
+                found = True
+                target_requested = input('Who do you want to attack?')
+                target = None
+                if current_node.character is not None and\
+                        current_node.character.name.lower() == target_requested.lower():
+                    target = current_node.character
+                    if target is None:
+                        print("That enemy isn't here")
+                    else:
+                        item.use(target)
+        if not found:
+            print("You don't have this item")
