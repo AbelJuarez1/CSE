@@ -349,19 +349,9 @@ while True:
             print(item.name)
             print()
     if 'use' in command:
-        item_requested = command[7:]
+        item_requested = command[4:]
         found = False
-        for item in player.inventory:
-            if item.name == item_requested:
-                found = True
-                target_requested = input('Who do you want to attack?')
-                target = None
-                if current_node.character is not None and\
-                        current_node.character.name.lower() == target_requested.lower():
-                    target = current_node.character
-                    if target is None:
-                        print("That enemy isn't here")
-                    else:
-                        item.use(target)
-        if not found:
-            print("You don't have this item")
+        for item in inventory:
+            if item_requested == item:
+                player.inventory.append(item)
+                
