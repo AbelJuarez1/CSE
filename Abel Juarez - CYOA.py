@@ -220,7 +220,7 @@ piano = Room("Piano Room", None, None, "tea", None, None, None, None, None, [pis
 
 vulture = Room("Vulture-Head Room", None, "tiger", "tea", "keeper", None, "ne", None, None, [gherb], [enemy, enemy,
                                                                                                       crimson],
-               "Insert Description")
+               "You can move east, south, west, and northwest.")
 
 tiger = Room("Tiger Room", None, "plant", "vulture", None, None, None, None, None, [shotgunammo], None,
              "A lone statue of a tiger's head stands on the wall. It has a plaque that reads,'Some tigers "
@@ -235,7 +235,7 @@ keeper = Room("Keeper's Bedroom", None, "vulture", None, None, None, None, None,
               "and a diary with a key lay open on the desk. The only exit is to the east.")
 
 nw = Room("North-West Corridor", None, None, "safe1", None, None, None, None, None, None, [enemy, crimson],
-          "Insert Description")
+          "You can move south.")
 
 safe1 = Room("Safe Room", "nw", None, None, None, None, None, None, None, None, None,
              "There is a box in here to place your items and a typewriter to save your progress. The only"
@@ -243,27 +243,27 @@ safe1 = Room("Safe Room", "nw", None, None, None, None, None, None, None, None, 
 
 mirror = Room("Mirror Room", None, None, None, "main_hall", None, None, "costume", None, [gherb, gherb, grenade],
               None,
-              "Insert Description")
+              "You can move west and southeast.")
 
 sgal = Room("Small Gallery", None, "dog", None, "main_hall", None, None, None, None, None, [enemy],
-            "Insert Description")
+            "You can move east and west.")
 
 costume = Room("Costume Room", "mirror", None, None, None, None, None, None, None, None, None,
-               "Insert Description")
+               "You can move north.")
 
 dog = Room("Hallway", "ne", None, None, "sgal", None, None, None, None, [pistolammo], [cerberus, cerberus],
            "Your in a long hallway with a couple of ammo clips laying around. A couple of dogs are blocking"
            "the way north. You can go back west if you need.")
 
 ne = Room("North-East Room", "bath", "boiler", "dog", "crow", None, None, None, "ceiling", None, None,
-          "Insert Description")
+          "You can move north, east, south, west, and southwest.")
 
 bath = Room("Bathroom", None, None, "ne", None, None, None, None, None, None, [enemy],
             "There is a bathtub filled with dirty water. It seems that thee is something shining inside of of"
             "it. One exit leads south.")
 
 boiler = Room("Boiler Room", None, None, None, "ne", None, None, None, None, [rherb], [cerberus, cerberus],
-              "Insert Description")
+              "You can move west.")
 
 crow = Room("Gallery", "safe2", "ne", None, "outside", None, "Study", None, None, None, [crow],
             "There isn't much here but a couple of annoying crows. There are paths to the north, east, "
@@ -278,15 +278,15 @@ study = Room("Study", None, None, "crow", None, None, None, None, None, None, [c
              "Insert Description")
 
 outside = Room("Outside Corridor", "shed", "crow", None, None, None, None, None, None, None, [crimson, cerberus],
-               "Insert Description")
+               "You can move north and east")
 
 shed = Room("Shed", None, None, "outside", None, None, None, None, None, [gherb, gherb, dagger, grenade], None,
-            "Insert Description")
+            "You can move south.")
 
 ceiling = Room("Ceiling Room", None, "ne", "shotgun", None, None, None, None, None, [pistolammo], None,
-               "Insert Description")
+               "You can move east and south.")
 
-shotgun = Room("Shotgun Room", "ceiling", None, None, None, None, None, None, None, [Shotgun], None,
+shotgun = Room("Shotgun Room", "ceiling", None, None, None, None, None, None, None, [shot], None,
                "There is a shotgun on the wall. The only exit is to the north.")
 
 current_node = main_hall
@@ -348,10 +348,3 @@ while True:
         for item in player.inventory:
             print(item.name)
             print()
-    if 'use' in command:
-        item_requested = command[4:]
-        found = False
-        for item in inventory:
-            if item_requested == item:
-                player.inventory.append(item)
-                
