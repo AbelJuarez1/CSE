@@ -151,14 +151,12 @@ class Character(object):
         self.weapon = weapon
 
     def attack(self, target):
-        target.damage(self.weapon.damage)
+        if self.health >= 0:
+            target.damage(self.weapon.damage)
 
     def take_damage(self, dmg):
-        self.health(dmg)
-
-    # def interact(self, item):
-    #     item.inventory
-
+        if self.health >= 0:
+            self.health(dmg)
 
 knife = Knife()
 shot = Shotgun()
@@ -169,10 +167,10 @@ grenade = Grenade()
 dagger = Dagger()
 shotgunammo = Ammo("shotgun shells", 4)
 pistolammo = Ammo("handgun ammo", 5)
-zombie = ZombieClaws()
+zom = ZombieClaws()
 
 player = Character("You", 100, None, knife)
-enemy = Character("zombie", 50, None, shot)
+zombie = Character("zombie", 50, None, shot)
 crimson = Character("crimson", 200, None, ZombieClaws)
 plant_enemy = Character("large plant", 300, None, None)
 cerberus = Character("Cerberus", 75, None, None)
@@ -210,15 +208,15 @@ dining = Room("Dining Room", "tea", "main_hall", None, None, None, None, None, N
               "A big table is in the middle of the room."
               " One door leads east, and another leads north")
 
-tea = Room("Tea Room", "vulture", None, "dining", None, "piano", None, None, None, None, [enemy],
+tea = Room("Tea Room", "vulture", None, "dining", None, "piano", None, None, None, None, [zombie],
            "You find one of your friends dead on the floor. A zombie walks toward you."
                        " There is a door to the south, north, and northeast.")
 
-piano = Room("Piano Room", None, None, "tea", None, None, None, None, None, [pistolammo], [enemy, crimson],
+piano = Room("Piano Room", None, None, "tea", None, None, None, None, None, [pistolammo], [zombie, crimson],
              "There is a piano with a music score on it. An ammo clip lays on top of a bar stool."
              " The only exit is to the south.")
 
-vulture = Room("Vulture-Head Room", None, "tiger", "tea", "keeper", None, "ne", None, None, [gherb], [enemy, enemy,
+vulture = Room("Vulture-Head Room", None, "tiger", "tea", "keeper", None, "ne", None, None, [gherb], [zombie, zombie,
                                                                                                       crimson],
                "You can move east, south, west, and northwest.")
 
@@ -230,11 +228,11 @@ plant = Room("Plant Room", None, None, None, "tiger", None, None, None, None, [g
              "There is a monstrous plant that seems to be in your way. Past it are some herbs. The only exit"
              "is to the west.")
 
-keeper = Room("Keeper's Bedroom", None, "vulture", None, None, None, None, None, None, [dagger], [enemy, enemy],
+keeper = Room("Keeper's Bedroom", None, "vulture", None, None, None, None, None, None, [dagger], [zombie, zombie],
               "The room is small with a big bed right in the middle. A body is laying on the floor, "
               "and a diary with a key lay open on the desk. The only exit is to the east.")
 
-nw = Room("North-West Corridor", None, None, "safe1", None, None, None, None, None, None, [enemy, crimson],
+nw = Room("North-West Corridor", None, None, "safe1", None, None, None, None, None, None, [zombie, crimson],
           "You can move south.")
 
 safe1 = Room("Safe Room", "nw", None, None, None, None, None, None, None, None, None,
@@ -245,7 +243,7 @@ mirror = Room("Mirror Room", None, None, None, "main_hall", None, None, "costume
               None,
               "You can move west and southeast.")
 
-sgal = Room("Small Gallery", None, "dog", None, "main_hall", None, None, None, None, None, [enemy],
+sgal = Room("Small Gallery", None, "dog", None, "main_hall", None, None, None, None, None, [zombie],
             "You can move east and west.")
 
 costume = Room("Costume Room", "mirror", None, None, None, None, None, None, None, None, None,
@@ -258,7 +256,7 @@ dog = Room("Hallway", "ne", None, None, "sgal", None, None, None, None, [pistola
 ne = Room("North-East Room", "bath", "boiler", "dog", "crow", None, None, None, "ceiling", None, None,
           "You can move north, east, south, west, and southwest.")
 
-bath = Room("Bathroom", None, None, "ne", None, None, None, None, None, None, [enemy],
+bath = Room("Bathroom", None, None, "ne", None, None, None, None, None, None, [zombie],
             "There is a bathtub filled with dirty water. It seems that thee is something shining inside of of"
             "it. One exit leads south.")
 
@@ -325,9 +323,6 @@ while True:
             current_node.move(command)
         except KeyError:
             print("You can't go that way.")
-            print()
-    else:
-            print('Command not recognized')
             print()
     if 'take' in command:
         item_requested = command[5:]
